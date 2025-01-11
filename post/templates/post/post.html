@@ -7,6 +7,10 @@
 </head>
 <body>
     <h1>Create Post</h1>
-    {{ form }}
+    <form action="{% url 'index' %}">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit", name="save">CREATE NEW</button>
+    </form>
 </body>
 </html>
